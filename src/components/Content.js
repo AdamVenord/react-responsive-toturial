@@ -7,7 +7,7 @@ const Content = ({ styles }) => {
       "well yeah"
   };
 
-  const post = Array(20).fill(dummyPost);
+  const posts = Array(20).fill(dummyPost);
 
   const contentStyle = {
     paddingTop: styles.topBarHeight + 20,
@@ -15,4 +15,19 @@ const Content = ({ styles }) => {
     paddingBottom: styles.footerMenuHeight + 20,
     paddingLeft: 20
   };
-}
+
+  return (
+    <div style={contentStyle}>
+      {posts.map((post, i) => {
+        return (
+          <div key={i} style={{ marginBottom: 40 }}>
+            <h2 style={{ marginBottom: 0 }}>{post.title}</h2>
+            <p>{post.summary}</p>
+          </div>
+        );
+      })}
+    </div>
+  );
+};
+
+export default Content;

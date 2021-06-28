@@ -1,7 +1,6 @@
 import React from 'react';
-import { styles } from 'ansi-colors';
 
-const TopBar = ({ style }) => {
+const TopBar = ({ styles }) => {
   const topBarStyle = {
     position: 'fixed',
     top: 0,
@@ -18,7 +17,7 @@ const TopBar = ({ style }) => {
   };
 
   return (
-    <div style={topBarSTyle}> 
+    <div style={topBarStyle}> 
       <span>{`😺️`}</span>
         App
       <span>{`⚙️`}</span>
